@@ -36,6 +36,6 @@ def search_view(request):
         # Ordenar por similitud y obtener la película más similar
         recommended_movie = max(similarities, key=lambda x: x[1])[0]
         
-        return render(request, 'search.HTML', {'recommended_movie': recommended_movie})
+        return render(request, 'suggestions.HTML', {'recommended_movie': recommended_movie})
     
-    return render(request, 'search.HTML')
+    return render(request, 'suggestions.HTML')
